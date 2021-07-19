@@ -6,6 +6,7 @@
     <meta name="description" content="...">
     <meta name="keywords" content="...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <link rel="icon" href="assets/img/favicon.ico" type="image/ico" sizes="16x16"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find Your Superhero</title>
     <!-- CDN Bootstrap 4.6.0 -->
@@ -14,17 +15,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+      <div class="">
+	<img src="assets/img/sh2.jpg" alt="" class="mx-2" style="width:50px;">
+	<span class="navbar-brand mb-0 h1">SuperHero</span>
+      </div>
+      </div>
+    </nav>
     <header class="text-center pt-5">
+      <img src="assets/img/sh1.jpg" alt="">
       <h1>Encuentra tu SuperHero</h1>
-      <p class="lead">Un ejemplo de un buscador de superHeroes</p>
     </header>
     <section>
       <form>
 	<div class="row w-50 m-auto">
-	  <div class="col-12 col-sm-6">
-	    <label>Ingrese el nombre o Id del superheroe</label>
+	  <div class="col-12">
+	    <label>Ingresa el numero del SuperHero a Buscar</label>
 	  </div>
-	  <div class="col-12 col-sm-6">
+	  <div class="col-12">
 	    <input id="superHeroInput" class="form-control" type="number"/>
 	  </div>
 	</div>
@@ -32,12 +41,16 @@
       </form>
     </section>
 
-    <section>
+    <section class="">
       <div id="heroCard" class="container"></div>
+      <div class="mb-5 py-5">
+	<div id="heroStats" class="container" style="height:300px;"></div>
+      </div>
     </section>
 
     <!-- JS routes -->
     <script src="assets/js/jquery.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
