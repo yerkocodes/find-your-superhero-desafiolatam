@@ -107,6 +107,8 @@ $(document).ready(function(){
 					}
 
 					let chart = new CanvasJS.Chart("heroStats", config);
+					$("#chartSection").attr("class", "mb-5 py-5");
+					$("#heroStats").attr({class: "container" ,style: "height:300px"});
 					chart.render();
 
 				},

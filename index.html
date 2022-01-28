@@ -11,6 +11,8 @@
     <title>Find Your Superhero</title>
     <!-- CDN Bootstrap 4.6.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- CDN FONTAWESOME v5.15.4 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -42,12 +44,21 @@
       </form>
     </section>
 
-    <section class="">
+    <!--CARD-->
+    <section id="cardSection">
       <div id="heroCard" class="container"></div>
-      <div class="mb-5 py-5">
-        <div id="heroStats" class="container" style="height:300px;"></div>
-      </div>
     </section>
+    <!--CHART-->
+    <section id="chartSection">
+      <div id="heroStats"></div>
+    </section>
+
+    <footer class="bg-dark mt-5 p-4">
+      <div class="text-center text-light">
+        <i class="fab fa-github fa-2x"></i>
+        <p class="my-2">Project created by Yerko Cortes Baeza.</p>
+      </div>
+    </footer>
 
     <!-- JS routes -->
     <!--<script src="assets/js/jquery.js"></script>-->
