@@ -1,9 +1,50 @@
+:root {
+  /*--blue-color-brand: #17A3B8;*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
-  /*font-family: 'Bangers', cursive;*/
   font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+}
+
+.imageHeader {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../img/header.jpg");
+  /*background-image: url("../img/header.jpg");*/
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageHeader h1 {
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  color: #e5a400;
+  text-shadow: red 5px 2px 5px;
+  font-size: 7rem;
+}
+
+.searchHero {
+  margin: -60px;
+}
+
+.formSearchHero {
+  background-color: white;
+  padding: 25px;
+  box-shadow: gray 0px 0px 60px;
+  margin-bottom: 150px;
+  border-radius: 15px;
 }
