@@ -19,6 +19,12 @@ $(document).ready(function(){
 		if( !isNaN(validateInput(valueInput)) && validateInput(valueInput) <= 732 ){
 			//Cleaned error message area
 			$("#errorMessage").text("");
+			$('#heroStats').html("");
+			$('#heroCard').html(`
+				<div class="container text-center fa-3x">
+					<i class="fas fa-spinner fa-pulse"></i>
+				</div>
+			`);
 
 			$.ajax({
 				type: "get",
@@ -60,33 +66,15 @@ $(document).ready(function(){
 		</div>
 		`);
 
-
 					let estadisticas = [];
+					let powerStatsData = data.powerstats
 
-					estadisticas.push({
-						label: "Intelligence",
-						y: data.powerstats.intelligence
-					});
-					estadisticas.push({
-						label: "strength",
-						y: data.powerstats.strength
-					});
-					estadisticas.push({
-						label: "speed",
-						y: data.powerstats.speed
-					});
-					estadisticas.push({
-						label: "durability",
-						y: data.powerstats.durability
-					});
-					estadisticas.push({
-						label: "power",
-						y: data.powerstats.power
-					});
-					estadisticas.push({
-						label: "combat",
-						y: data.powerstats.combat
-					});
+					for(let property in powerStatsData){
+						estadisticas.push({
+							label: property,
+							y: powerStatsData[property]
+						});
+					};
 
 					let config = {
 						animationEnabled : true,
