@@ -16,7 +16,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		let valueInput = $("#superHeroInput").val(); //Valor del input 
 
-		if( !isNaN(validateInput(valueInput)) && validateInput(valueInput) <= 732 ){
+		if( !isNaN(validateInput(valueInput)) && validateInput(valueInput) <= 732 && valueInput !== ""){
 			//Cleaned error message area
 			$("#errorMessage").text("");
 			$('#heroStats').html("");

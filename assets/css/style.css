@@ -1,14 +1,19 @@
 :root {
-  /*--blue-color-brand: #17A3B8;*/
+  --yellowHeaders: #e5a400;
+  --yellowBtn: #ffc638;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
 }
 
 html {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px */
 }
@@ -18,33 +23,130 @@ body {
   font-size: 1.6rem;
 }
 
+/* ZOOM */
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.05); /* 1 = 100% */
+}
+/* ZOOM-END */
+
+/* HEADER */
 .imageHeader {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../img/header.jpg");
   /*background-image: url("../img/header.jpg");*/
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .imageHeader h1 {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', sans-serif;
+  text-align: center;
   text-transform: uppercase;
-  color: #e5a400;
+  color: var(--yellowHeaders);
   text-shadow: red 5px 2px 5px;
   font-size: 7rem;
+}
+/* HEADER END */
+
+/*LINKS*/
+.link {
+  text-decoration: none;
+  color: red;
+}
+
+.link:hover {
+  /*text-decoration: none;*/
+  color: #b40000;
+}
+
+.github {
+  margin: 15px 0px 15px 0px;
+}
+
+.github a {
+  font-size: 1.7rem;
+  text-decoration: none;
+  font-weight: 900;
+  /*color: black;*/
+}
+/*LINKS END*/
+
+/* FORM */
+
+.header2 {
+  font-size: 2.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  /*margin: 20px 0px 20px 0px;*/
 }
 
 .searchHero {
   margin: -60px;
-}
-
-.formSearchHero {
   background-color: white;
   padding: 25px;
   box-shadow: gray 0px 0px 60px;
   margin-bottom: 150px;
   border-radius: 15px;
 }
+
+.button {
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: var(--yellowHeaders);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 5px 30px 5px 30px;
+  transition: background-color 0.5s ease;
+  box-shadow: red 5px 5px 0px;
+}
+
+.button:hover {
+  font-family: 'Bangers', cursive;
+  color: var(--yellowBtn);
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #d50000;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 5px 30px 5px 30px;
+  box-shadow: var(--yellowHeaders) 5px 5px 0px;
+}
+
+#iconsCode h2{
+  font-size: 2rem;
+  /*margin: 20px 0px 20px 0px;*/
+  font-weight: 900;
+}
+
+.iconsContainer {
+  width: 50%;
+  /*text-align: center;*/
+}
+
+.iconsContainer article h3{
+  color: black;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.iconsContainer article i {
+  font-size: 4rem;
+}
+
+.divisor {
+  border: solid #dedede 1px;
+  margin: auto;
+  width: 15%;
+}
+/* FORM END */
